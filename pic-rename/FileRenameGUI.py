@@ -1,19 +1,8 @@
-# RENAME PICTURE FILES
-# This program scans a folder structure looking for picture files.  When found, it checks their file name and
-# compares it against a set of rules for formatting.  If the filename is not in an acceptable format, the
-# program automatically renames the file based upon file attributes
-#
-# USE THIS LINE OF TEXT TO RUN THIS ROUTINE FROM WITHIN NOTEPAD++
-# cmd /k c:\python34\python.exe "c:\users\cmaue\onedrive\programming\projects\picture_rename\_File_Rename_GUI.py"
-# ************************************************************************************************************
-
-
 # IMPORT REQUIRED LIBRARIES
 # The following will import libraries that are required for this program
 # ************************************************************************************************************
 import logging
 import os
-import FuncStringManip
 import FuncConvertTime
 import FuncFileAttrib
 import FuncFileRename
@@ -21,7 +10,9 @@ import FuncFileRename
 # DETERMINE LOCATION OF SCRIPT BEING RUN
 # By locating which directory the current script resides in, the program can automatically find the various INI files its needs to configure itself, regardless of paths
 # ************************************************************************************************************
-path = os.path.dirname(os.path.realpath(__file__))	
+path = os.path.split(__file__)
+print(path)
+path = os.path.dirname(os.path.realpath(__file__))
 fileNameWithExt = os.path.basename(__file__)
 extPointer = fileNameWithExt.find('.py')
 fileName = fileNameWithExt[:extPointer]
