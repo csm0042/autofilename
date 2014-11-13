@@ -106,8 +106,8 @@ class IOMonitor(threading.Thread):
             # Read text field and trigger file rename loop
             if self.IOos.input[2] == True:
                 logging.info('[Main (thread-2)] Run button has been pressed at t = +%f' % float(time.time()-startime))
-                self.pathText = Thread1.app.tkHandshakeReadText(0)
-                print(self.pathText)
+                self.pathText = Thread1.app.readTextField(1)
+                Thread1.app.writeTextField(2, self.pathText)
                 self.IOos.input[2] = False
 
             # Shut down application and logic loop if "quit" button is pressed in application window
