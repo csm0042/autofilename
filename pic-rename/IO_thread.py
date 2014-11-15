@@ -34,12 +34,11 @@ class IoMonitor(threading.Thread):
     def run(self):
         while True:
             self.lineFromLog = linecache.getline(self.logfile, self.lastLineRead)
-            if self.lineFromLog != "":
+            while self.lineFromLog != "":
                 SpawnGuiFromIni.AppWindow.write_text(self.appWindowObject, 1, self.lineFromLog)
                 self.lastLineRead += 1
-            else:
-                linecache.clearcache()
-                pass
+                self.lineFromLog = linecache.getline(self.logfile, self.lastLineRead)
+            linecache.clearcache()
             time.sleep(0.20)
 
 

@@ -60,34 +60,28 @@ IoTable = ApplicationIO()
 IoTableCache = ApplicationIO()
 IoTableOS = ApplicationIO()
 
-AppWindowObject = SpawnGuiFromIni.AppWindow(guiIniFile, debugLogFile, IoTable)
+
 
 
 
 #######################################################################################################################
 # Start IO monitor thread
 #######################################################################################################################
-enable_thread_2 = True
+AppWindowObject = SpawnGuiFromIni.AppWindow(guiIniFile, debugLogFile, IoTable)
+IoThread = IO_thread.IoMonitor(IoTable, IoTableCache, IoTableOS, debugLogFile, AppWindowObject)
+logging.info('[Main] Spawning IO monitor thread (thread-2)')
 
-if enable_thread_2 == True:
-    IoThread = IO_thread.IoMonitor(IoTable, IoTableCache, IoTableOS, debugLogFile, AppWindowObject)
-    logging.info('[Main] Spawning IO monitor thread (thread-2)')
+IoThread.daemon = True
+logging.info('[Main] IoThread daemon flag set to "True"')
 
-    IoThread.daemon = True
-    logging.info('[Main] IoThread daemon flag set to "True"')
+IoThread.start()
+logging.info('[Main] IoThread started')
 
-    IoThread.start()
-    logging.info('[Main] IoThread started')
-else:
-    pass
 
 
 
 
 #######################################################################################################################
-# Start application window thread
+# Start application window (runs in main thread)
 #######################################################################################################################
-enable_thread_3 = True
-
-if enable_thread_3 == True:
-    SpawnGuiFromIni.AppWindow.SpawnAppWindow(AppWindowObject)
+SpawnGuiFromIni.AppWindow.SpawnAppWindow(AppWindowObject)

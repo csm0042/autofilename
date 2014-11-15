@@ -18,6 +18,7 @@ def callback(AppWindowObject, instance, logfile):
 
     if instance == 2:
         path = SpawnGuiFromIni.AppWindow.return_text(AppWindowObject, 1)
+        SpawnGuiFromIni.AppWindow.clear_text(AppWindowObject, 2)
         SpawnGuiFromIni.AppWindow.write_text(AppWindowObject, 1, ('\nUsing path --> ' + str(path)))
         fileRenameObject = file_rename.FileRename(str(path), logfile)
         file_rename.FileRename.RenameFiles(fileRenameObject)
