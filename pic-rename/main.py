@@ -84,4 +84,4 @@ logging.info('[Main] IoThread started')
 #######################################################################################################################
 # Start application window (runs in main thread)
 #######################################################################################################################
-SpawnGuiFromIni.AppWindow.SpawnAppWindow(AppWindowObject)
+AppWindowObject.SpawnAppWindow()
