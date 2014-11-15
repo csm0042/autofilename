@@ -357,7 +357,11 @@
       <created>1416063040548</created>
       <updated>1416063040548</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="1) Finisehd fixing gui builder&#10;2) Working on file_rename app">
+      <created>1416063061977</created>
+      <updated>1416063061977</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
