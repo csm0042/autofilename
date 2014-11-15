@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6179cce7-56b3-4dda-aff3-81cb798e63d9" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\Python34\MyProjects\pic-rename\pic-rename\scrathpad.py" afterPath="$PROJECT_DIR$/pic-rename/scratchpad.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pic-rename.iws" />
@@ -153,7 +152,7 @@
       <recent name="C:\Python34\MyProjects\gui-by-ini\guibyini" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.scratchpad">
+  <component name="RunManager" selected="Python.IO_thread">
     <configuration default="true" type="tests" factoryName="py.test">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -291,8 +290,25 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <list size="1">
+    <configuration default="false" name="IO_thread" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pic-rename" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pic-rename" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pic-rename/IO_thread.py" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Python.scratchpad" />
+      <item index="1" class="java.lang.String" itemvalue="Python.IO_thread" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -337,7 +353,11 @@
       <created>1416062839303</created>
       <updated>1416062839303</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="1) Finisehd fixing gui builder&#10;2) Working on file_rename app">
+      <created>1416063040548</created>
+      <updated>1416063040548</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
