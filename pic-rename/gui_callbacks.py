@@ -1,57 +1,26 @@
 __author__ = 'chris.maue'
 
+import file_rename
+import logging
+import sys
+sys.path.insert(0, 'c:/python34/MyProjects/gui-by-ini/guibyini')
 import SpawnGuiFromIni
 
-def callback(Appwindow, instance):
+
+def callback(AppWindowObject, instance, logfile):
+    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(levelname)-8s %(message)s',
+                        filename=logfile, filemode='w')
+    logging.info('[gui_callbacks] called with a value of %d' % instance)
+
     if instance == 1:
-        SpawnGuiFromIni.SpawnAppwindow.write_text(Appwindow, 0, '\nF1 Pressed')
+        AppWindowObject.root.destroy()
         pass
 
     if instance == 2:
-        SpawnGuiFromIni.SpawnAppwindow.write_text(Appwindow, 0, '\nF2 Pressed')
-        pass
+        path = SpawnGuiFromIni.AppWindow.return_text(AppWindowObject, 1)
+        SpawnGuiFromIni.AppWindow.write_text(AppWindowObject, 1, ('\nUsing path --> ' + str(path)))
+        fileRenameObject = file_rename.FileRename(str(path), logfile)
+        file_rename.FileRename.RenameFiles(fileRenameObject)
 
-    if instance == 3:
-        SpawnGuiFromIni.SpawnAppwindow.write_text(Appwindow, 0, '\nF3 Pressed')
-        pass
-
-    if instance == 4:
-        SpawnGuiFromIni.SpawnAppwindow.write_text(Appwindow, 0, '\nF4 Pressed')
-        pass
-
-    if instance == 5:
-        SpawnGuiFromIni.SpawnAppwindow.write_text(Appwindow, 0, '\nF5 Pressed')
-        pass
-
-    if instance == 6:
-        SpawnGuiFromIni.SpawnAppwindow.write_text(Appwindow, 0, '\nF6 Pressed')
-        pass
-
-    if instance == 7:
-        SpawnGuiFromIni.SpawnAppwindow.write_text(Appwindow, 0, '\nF7 Pressed')
-        pass
-
-    if instance == 8:
-        SpawnGuiFromIni.SpawnAppwindow.write_text(Appwindow, 0, '\nF8 Pressed')
-        pass
-
-    if instance == 9:
-        SpawnGuiFromIni.SpawnAppwindow.write_text(Appwindow, 0, '\nF9 Pressed')
-        pass
-
-    if instance == 10:
-        SpawnGuiFromIni.SpawnAppwindow.write_text(Appwindow, 0, '\nF10 Pressed')
-        pass
-
-    if instance == 11:
-        SpawnGuiFromIni.SpawnAppwindow.clear_text(Appwindow, 0)
-        pass
-    if instance == 12:
-        text = SpawnGuiFromIni.SpawnAppwindow.return_text(Appwindow, 0)
-        print(text)
-        pass
-
-    if instance == 13:
-        Appwindow.root.destroy()
         pass
 
