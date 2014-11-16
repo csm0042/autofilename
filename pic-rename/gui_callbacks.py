@@ -1,8 +1,8 @@
 __author__ = 'chris.maue'
 
-#import file_rename
-from file_rename import FileRename
+
 import logging
+import rename_script
 import sys
 sys.path.insert(0, 'c:/python34/MyProjects/gui-by-ini/guibyini')
 import SpawnGuiFromIni
@@ -18,11 +18,9 @@ def callback(AppWindowObject, instance, logfile):
         pass
 
     if instance == 2:
-        path = SpawnGuiFromIni.AppWindow.return_text(AppWindowObject, 1)
+        path = str(SpawnGuiFromIni.AppWindow.return_text(AppWindowObject, 1))
         SpawnGuiFromIni.AppWindow.clear_text(AppWindowObject, 2)
         SpawnGuiFromIni.AppWindow.write_text(AppWindowObject, 1, ('\nUsing path --> ' + str(path)))
-        fileRenameObject = FileRename(str(path), logfile)
-        fileRenameObject.RunLoop()
+        rename_script.rename_script(str(path), logfile)
 
-        pass
 
