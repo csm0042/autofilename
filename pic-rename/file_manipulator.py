@@ -6,6 +6,7 @@ __author__ = 'chris.maue'
 #######################################################################################################################
 import logging
 import os
+import time
 
 
 
@@ -23,7 +24,7 @@ class file_manipulator(object):
         
         logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(levelname)-8s %(message)s', 
                             filename=self.logfile, filemode='w')
-        logging.info('[FileRename(object init) logger started')
+        logging.info('[file_manipulator.__init__] Logger started')
         self.path = str()
 
         self.filePath = str()
@@ -51,8 +52,8 @@ class file_manipulator(object):
         self.dirCount = 0
         self.skipCount = 0
         self.index = 0
-        logging.info('[RenameFiles] Counters reset')
-        logging.info('[FileRename(object init) complete')
+        logging.info('[file_manipulator.__init__] Counters reset')
+        logging.info('[file_manipulator.__init__] complete')
 
 
 
@@ -63,11 +64,9 @@ class file_manipulator(object):
     def return_files_root_only(self):
         self.basedir = self.basedir.replace('\\', '/')
         self.basedir = self.basedir.replace('\n', '')
-        logging.info('[RenameFiles(method)] Called with path %s' % self.basedir)
         for file in os.listdir(self.basedir):
             self.file_wp = os.path.join(self.basedir, file)
             if os.path.isfile(self.file_wp):
-                logging.info('[findFilesRootOnly(method)] Found: %s' % self.file_wp)
                 self.filelist.append(self.file_wp)
             else:
                 pass
@@ -82,12 +81,10 @@ class file_manipulator(object):
     def return_files_including_subs(self):
         self.basedir = self.basedir.replace('\\', '/')
         self.basedir = self.basedir.replace('\n', '')
-        logging.info('[RenameFiles(method)] Called with path %s' % self.basedir)
         for root, dirs, files in os.walk(os.path.normcase(self.basedir)):
             for file in files:
                 self.file_wp = os.path.join(root, file)
                 if os.path.isfile(self.file_wp):
-                    logging.info('[findFilesIncludingSubs(method)] Found: %s' % self.file_wp)
                     self.filelist.append(self.file_wp)
                 else:
                     pass
@@ -103,15 +100,12 @@ class file_manipulator(object):
         self.file = os.path.normcase(file)
         self.whitelist = whitelist
 
-        logging.info('[checkFileExt(method)] Checking file: %s' % self.file)
         self.fileRoot, self.fileExt = os.path.splitext(file)
         self.fileExt = self.fileExt.replace('.', '')
 
         if self.fileExt in self.whitelist:
-            logging.info('[checkFileExt(method)] File-type valid for conversion')
             return True
         else:
-            logging.info('[checkFileExt(method)] Invalid file-type for conversion')
             return False
 
 
@@ -121,12 +115,10 @@ class file_manipulator(object):
 # Extract file attributes
 #######################################################################################################################
     def generate_filename(self, file):
-        import os
-        import time
+        self.file = os.path.normcase(file)
 
-        self.file = file
-        self.filePath, self.fileName = os.path.split(file)
-        logging.info('[genNewFileName(method)] Starting with: %s' % self.fileName)
+        self.fileRoot, self.fileExt = os.path.splitext(self.file)
+        self.filePath, self.fileName = os.path.split(self.fileRoot)
 
         info = os.stat(self.file)
         utc_mod_time = time.gmtime(info.st_mtime)
@@ -137,10 +129,9 @@ class file_manipulator(object):
                           + str(time.strftime('%H', utc_mod_time)) + 'h'
                           + str(time.strftime('%M', utc_mod_time)) + 'm'
                           + str(time.strftime('%S', utc_mod_time)) + 's_'
-                          + str(info.st_size) + 'b')
+                          + str(info.st_size) + 'b' + self.fileExt)
 
         self.newfile = os.path.join(self.filePath, self.nfileName)
-        logging.info('[genNewFileName(method)] Converted to: %s' % self.nfileName)
 
         return self.newfile
 

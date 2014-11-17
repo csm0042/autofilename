@@ -31,7 +31,7 @@ class monitor_io(threading.Thread):
     def run(self):
         while True:
             self.lineFromLog = linecache.getline(self.logfile, self.last_line_read)
-            while self.lineFromLog != "":
+            while len(self.lineFromLog) != 0:
                 self.gui_object.write_text(2, self.lineFromLog)
                 self.last_line_read += 1
                 self.lineFromLog = linecache.getline(self.logfile, self.last_line_read)
