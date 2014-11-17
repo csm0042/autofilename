@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6179cce7-56b3-4dda-aff3-81cb798e63d9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pic-rename/file_manipulator.py" afterPath="$PROJECT_DIR$/pic-rename/file_manipulator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pic-rename/rename_script.py" afterPath="$PROJECT_DIR$/pic-rename/rename_script.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pic-rename.iws" />
@@ -194,7 +192,7 @@
       <console-settings />
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.rename_script">
     <configuration default="false" name="file-rename" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -372,10 +370,95 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <list size="3">
+    <configuration default="false" name="scratchpad" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pic-rename" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pic-rename" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pic-rename/scratchpad.py" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="file_manipulator" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pic-rename" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pic-rename" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pic-rename/file_manipulator.py" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="gui_callbacks" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pic-rename" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pic-rename" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pic-rename/gui_callbacks.py" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="IO_thread" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pic-rename" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pic-rename" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pic-rename/IO_thread.py" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="rename_script" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pic-rename" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pic-rename" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pic-rename/rename_script.py" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <list size="8">
       <item index="0" class="java.lang.String" itemvalue="Python.file-rename" />
       <item index="1" class="java.lang.String" itemvalue="Python.main" />
       <item index="2" class="java.lang.String" itemvalue="Python.SpawnGuiFromIni" />
+      <item index="3" class="java.lang.String" itemvalue="Python.scratchpad" />
+      <item index="4" class="java.lang.String" itemvalue="Python.file_manipulator" />
+      <item index="5" class="java.lang.String" itemvalue="Python.gui_callbacks" />
+      <item index="6" class="java.lang.String" itemvalue="Python.IO_thread" />
+      <item index="7" class="java.lang.String" itemvalue="Python.rename_script" />
     </list>
     <recent_temporary>
       <list size="3">
@@ -431,7 +514,11 @@
       <created>1416258904133</created>
       <updated>1416258904133</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fully functional w/gui">
+      <created>1416265549966</created>
+      <updated>1416265549966</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -456,7 +543,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -464,7 +551,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18177028" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18177028" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994709" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -495,7 +582,8 @@
     </option>
     <MESSAGE value="1) Added calls to gui-by-ini for application window creation&#10;2) Updated gui.ini &#10;3) Added call to tkHandshakeReadText method in gui-by-ini to get current contents of a text field in the application window" />
     <MESSAGE value="2014-11-14 Updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="2014-11-14 Updates" />
+    <MESSAGE value="Fully functional w/gui" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fully functional w/gui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
