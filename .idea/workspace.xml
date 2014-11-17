@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6179cce7-56b3-4dda-aff3-81cb798e63d9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pic-rename/file_manipulator.py" afterPath="$PROJECT_DIR$/pic-rename/file_manipulator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pic-rename/rename_script.py" afterPath="$PROJECT_DIR$/pic-rename/rename_script.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pic-rename.iws" />
@@ -28,7 +30,7 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pic-rename/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6200608" vertical-offset="0" max-vertical-offset="1564">
+            <state vertical-scroll-proportion="-0.0775076" vertical-offset="459" max-vertical-offset="1564">
               <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
                 <element signature="e#296#310#0" expanded="true" />
@@ -40,8 +42,8 @@
       <file leaf-file-name="rename_script.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pic-rename/rename_script.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1020">
-              <caret line="54" column="84" selection-start-line="54" selection-start-column="84" selection-end-line="54" selection-end-column="84" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1144" max-vertical-offset="2482">
+              <caret line="99" column="35" selection-start-line="99" selection-start-column="35" selection-end-line="99" selection-end-column="35" />
               <folding>
                 <element signature="e#28#51#0" expanded="true" />
               </folding>
@@ -49,24 +51,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scratchpad.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pic-rename/scratchpad.py">
+      <file leaf-file-name="file_manipulator.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pic-rename/file_manipulator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1411">
-              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="50" selection-end-column="130" />
-              <folding />
+            <state vertical-scroll-proportion="-7.1578946" vertical-offset="1887" max-vertical-offset="2737">
+              <caret line="135" column="38" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="38" />
+              <folding>
+                <element signature="e#296#310#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="file_manipulator.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pic-rename/file_manipulator.py">
+      <file leaf-file-name="debug.log" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pic-rename/debug.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2079" max-vertical-offset="2737">
-              <caret line="149" column="69" selection-start-line="149" selection-start-column="69" selection-end-line="149" selection-end-column="69" />
-              <folding>
-                <element signature="e#296#310#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="6448" max-vertical-offset="18428">
+              <caret line="61" column="71" selection-start-line="61" selection-start-column="71" selection-end-line="61" selection-end-column="71" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -103,9 +105,9 @@
         <option value="$PROJECT_DIR$/pic-rename/IO_thread.py" />
         <option value="$PROJECT_DIR$/../gui-by-ini/guibyini/gui_class_definition.py" />
         <option value="$PROJECT_DIR$/pic-rename/gui_setup.ini" />
+        <option value="$PROJECT_DIR$/pic-rename/debug.log" />
         <option value="$PROJECT_DIR$/pic-rename/rename_script.py" />
         <option value="$PROJECT_DIR$/pic-rename/file_manipulator.py" />
-        <option value="$PROJECT_DIR$/pic-rename/debug.log" />
       </list>
     </option>
   </component>
@@ -425,7 +427,11 @@
       <created>1416258894533</created>
       <updated>1416258894533</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="2014-11-14 Updates">
+      <created>1416258904133</created>
+      <updated>1416258904133</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -648,7 +654,7 @@
         <state vertical-scroll-proportion="0.33222038" vertical-offset="8250" max-vertical-offset="8908">
           <caret line="497" column="13" selection-start-line="497" selection-start-column="13" selection-end-line="497" selection-end-column="13" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -658,7 +664,7 @@
         <state vertical-scroll-proportion="0.6458967" vertical-offset="0" max-vertical-offset="799">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="27" selection-end-column="77" />
           <folding>
-            <element signature="e#296#310#0" expanded="true" />
+            <element signature="e#296#310#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -679,10 +685,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pic-rename/scratchpad.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1411">
+          <caret line="58" column="53" selection-start-line="58" selection-start-column="53" selection-end-line="58" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pic-rename/debug.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6448" max-vertical-offset="7106">
+          <caret line="61" column="71" selection-start-line="61" selection-start-column="71" selection-end-line="61" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pic-rename/rename_script.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1020">
-          <caret line="54" column="84" selection-start-line="54" selection-start-column="84" selection-end-line="54" selection-end-column="84" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1144" max-vertical-offset="2482">
+          <caret line="99" column="35" selection-start-line="99" selection-start-column="35" selection-end-line="99" selection-end-column="35" />
           <folding>
             <element signature="e#28#51#0" expanded="true" />
           </folding>
@@ -691,33 +713,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pic-rename/file_manipulator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2079" max-vertical-offset="2737">
-          <caret line="149" column="69" selection-start-line="149" selection-start-column="69" selection-end-line="149" selection-end-column="69" />
+        <state vertical-scroll-proportion="-7.1578946" vertical-offset="1887" max-vertical-offset="2737">
+          <caret line="135" column="38" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="38" />
           <folding>
             <element signature="e#296#310#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pic-rename/debug.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.81914896" vertical-offset="583" max-vertical-offset="1241">
-          <caret line="66" column="137" selection-start-line="66" selection-start-column="137" selection-end-line="66" selection-end-column="137" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pic-rename/scratchpad.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1411">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="50" selection-end-column="130" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pic-rename/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6200608" vertical-offset="0" max-vertical-offset="1564">
+        <state vertical-scroll-proportion="-0.0775076" vertical-offset="459" max-vertical-offset="1564">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
             <element signature="e#296#310#0" expanded="true" />
