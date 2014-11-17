@@ -136,3 +136,20 @@ class file_manipulator(object):
         return self.newfile
 
 
+
+
+#######################################################################################################################
+# Increment filename
+#######################################################################################################################
+    def increment_filename(self, file, index):
+        self.nfileName = os.path.normcase(file)
+        self.index = index
+
+        self.index += 1
+        self.fileRoot, self.fileExt = os.path.splitext(self.nfileName)
+        self.nfileName = self.fileRoot + '(' + str(self.index) + ')' + self.fileExt
+        self.newfile = os.path.normcase(self.nfileName)
+
+        return self.newfile
+
+

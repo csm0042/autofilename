@@ -47,5 +47,9 @@ class rename_script(object):
             else:
                 logging.info('[rename_script.run] File name is already correct')
 
-            if os.path.isfile(self.newfile) == True:
+            if (self.extOk == True) and (self.newfile != self.file) and (os.path.isfile(self.newfile) == True):
                 logging.info('[rename_script.run] Collision detected with existing file')
+                self.index = 0
+                while os.path.isfile(self.newfile) == True:
+                    self.newfile = self.mainipulator_object.increment_filename(self.newfile, self.index)
+                logging.info('[rename_script.run] Using instead: %s' % self.newfile)
