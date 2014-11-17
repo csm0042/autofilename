@@ -7,12 +7,9 @@ __author__ = 'chris.maue'
 import logging
 import os
 import sys
-import IO_thread
-
-
 sys.path.insert(0, 'c:/python34/MyProjects/gui-by-ini/guibyini')
-sys.path.insert(0, 'c:/python34/MyProjects/pic-rename/pic-rename')
-import SpawnGuiFromIni
+import gui_class_definition
+import IO_thread
 
 
 
@@ -67,7 +64,8 @@ IoTableOS = ApplicationIO()
 #######################################################################################################################
 # Start IO monitor thread
 #######################################################################################################################
-AppWindowObject = SpawnGuiFromIni.AppWindow(guiIniFile, debugLogFile, IoTable)
+AppWindowObject = gui_class_definition.gui(guiIniFile, debugLogFile, IoTable)
+
 IoThread = IO_thread.IoMonitor(IoTable, IoTableCache, IoTableOS, debugLogFile, AppWindowObject)
 logging.info('[Main] Spawning IO monitor thread (thread-2)')
 
@@ -85,4 +83,4 @@ logging.info('[Main] IoThread started')
 #######################################################################################################################
 # Start application window (runs in main thread)
 #######################################################################################################################
-AppWindowObject.SpawnAppWindow()
+AppWindowObject.create_window()

@@ -3,9 +3,6 @@ __author__ = 'chris.maue'
 
 import logging
 import rename_script
-import sys
-sys.path.insert(0, 'c:/python34/MyProjects/gui-by-ini/guibyini')
-import SpawnGuiFromIni
 
 
 def callback(AppWindowObject, instance, logfile):
@@ -18,9 +15,9 @@ def callback(AppWindowObject, instance, logfile):
         pass
 
     if instance == 2:
-        path = str(SpawnGuiFromIni.AppWindow.return_text(AppWindowObject, 1))
-        SpawnGuiFromIni.AppWindow.clear_text(AppWindowObject, 2)
-        SpawnGuiFromIni.AppWindow.write_text(AppWindowObject, 1, ('\nUsing path --> ' + str(path)))
+        path = str(AppWindowObject.return_text(1))
+        AppWindowObject.clear_text(2)
+        AppWindowObject.write_text(2, ('\nUsing path --> ' + str(path)))
         rename_script.rename_script(str(path), logfile)
 
 

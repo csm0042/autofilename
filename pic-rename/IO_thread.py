@@ -6,9 +6,6 @@ __author__ = 'chris.maue'
 #######################################################################################################################
 import logging
 import linecache
-import sys
-sys.path.insert(0, 'c:/python34/MyProjects/gui-by-ini/guibyini')
-import SpawnGuiFromIni
 import threading
 import time
 
@@ -35,7 +32,7 @@ class IoMonitor(threading.Thread):
         while True:
             self.lineFromLog = linecache.getline(self.logfile, self.lastLineRead)
             while self.lineFromLog != "":
-                SpawnGuiFromIni.AppWindow.write_text(self.appWindowObject, 1, self.lineFromLog)
+                self.appWindowObject.write_text(1, self.lineFromLog)
                 self.lastLineRead += 1
                 self.lineFromLog = linecache.getline(self.logfile, self.lastLineRead)
             linecache.clearcache()
