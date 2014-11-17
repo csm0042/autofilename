@@ -14,7 +14,7 @@ import os
 #######################################################################################################################
 # Define class
 #######################################################################################################################
-class FileManip(object):
+class file_manipulator(object):
     def __init__(self, basedir, logfile):
         self.basedir = basedir
         self.dirToScan = str()
@@ -60,7 +60,7 @@ class FileManip(object):
 #######################################################################################################################
 # Define method for finding files to modify, including sub-directories under the root
 #######################################################################################################################
-    def findFilesRootOnly(self):
+    def return_files_root_only(self):
         self.basedir = self.basedir.replace('\\', '/')
         self.basedir = self.basedir.replace('\n', '')
         logging.info('[RenameFiles(method)] Called with path %s' % self.basedir)
@@ -79,7 +79,7 @@ class FileManip(object):
 #######################################################################################################################
 # Define method for finding files to modify, including sub-directories under the root
 #######################################################################################################################
-    def findFilesIncludingSubs(self):
+    def return_files_including_subs(self):
         self.basedir = self.basedir.replace('\\', '/')
         self.basedir = self.basedir.replace('\n', '')
         logging.info('[RenameFiles(method)] Called with path %s' % self.basedir)
@@ -99,7 +99,7 @@ class FileManip(object):
 #######################################################################################################################
 # Check file type against list of acceptable file-types to modify
 #######################################################################################################################
-    def checkFileExt(self, file, whitelist):
+    def return_valid_file_ext(self, file, whitelist):
         self.file = os.path.normcase(file)
         self.whitelist = whitelist
 
@@ -120,7 +120,7 @@ class FileManip(object):
 #######################################################################################################################
 # Extract file attributes
 #######################################################################################################################
-    def genNewFileName(self, file):
+    def generate_filename(self, file):
         import os
         import time
 

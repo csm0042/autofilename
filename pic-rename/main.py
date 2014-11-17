@@ -17,9 +17,9 @@ import IO_thread
 #######################################################################################################################
 # Determine project path and auto-set debug log file and gui configuration file names as appropriate
 #######################################################################################################################
-projectPath = os.path.split(__file__)
-debugLogFile = os.path.normcase(os.path.join(projectPath[0], 'debug.log'))
-guiIniFile = os.path.normcase(os.path.join(projectPath[0], 'gui_setup.ini'))
+project_path = os.path.split(__file__)
+debug_log_file = os.path.normcase(os.path.join(project_path[0], 'debug.log'))
+gui_ini_file = os.path.normcase(os.path.join(project_path[0], 'gui_setup.ini'))
 
 
 
@@ -29,11 +29,11 @@ guiIniFile = os.path.normcase(os.path.join(projectPath[0], 'gui_setup.ini'))
 #######################################################################################################################
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s %(levelname)-8s %(message)s',
-                    filename=debugLogFile,
+                    filename=debug_log_file,
                     filemode='w')
 logging.info('[Main] Program Logger Started')
-logging.info('[Main] Logging to file: %s' % debugLogFile)
-logging.info('[Main] Using GUI configuration file: %s' % guiIniFile)
+logging.info('[Main] Logging to file: %s' % debug_log_file)
+logging.info('[Main] Using GUI configuration file: %s' % gui_ini_file)
 
 
 
@@ -53,9 +53,9 @@ class ApplicationIO(object):
 #######################################################################################################################
 # Define Data tags used for interlocking between application window and IO monitor threads
 #######################################################################################################################
-IoTable = ApplicationIO()
-IoTableCache = ApplicationIO()
-IoTableOS = ApplicationIO()
+io_table = ApplicationIO()
+io_table_cache = ApplicationIO()
+io_table_os = ApplicationIO()
 
 
 
@@ -64,9 +64,9 @@ IoTableOS = ApplicationIO()
 #######################################################################################################################
 # Start IO monitor thread
 #######################################################################################################################
-AppWindowObject = gui_class_definition.gui(guiIniFile, debugLogFile, IoTable)
+gui_object = gui_class_definition.gui(gui_ini_file, debug_log_file, io_table_os)
 
-IoThread = IO_thread.IoMonitor(IoTable, IoTableCache, IoTableOS, debugLogFile, AppWindowObject)
+IoThread = IO_thread.monitor_io(io_table, io_table_cache, io_table_os, debug_log_file, gui_object)
 logging.info('[Main] Spawning IO monitor thread (thread-2)')
 
 IoThread.daemon = True
@@ -83,4 +83,4 @@ logging.info('[Main] IoThread started')
 #######################################################################################################################
 # Start application window (runs in main thread)
 #######################################################################################################################
-AppWindowObject.create_window()
+gui_object.create_window()
