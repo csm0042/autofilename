@@ -5,20 +5,34 @@ import logging
 import os
 
 class rename_script(object):
-    def __init__(self, path, logfile):
+    def __init__(self, path, logfile, types, include):
         self.path = path
         self.logfile = logfile
+        self.types = types.lower()
+        self.include = include.lower()
+
         logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(levelname)-8s %(message)s',
                             filename=self.logfile, filemode='w')
         logging.info('[rename_script.__init__] Logger started')
 
-        self.filename_wp_we = str()
-        self.newfile = str()
         self.manipulator_object = file_manipulator.file_manipulator(str(path), logfile)
-        self.extOk = False
-        self.include_sub_folders = True
-        self.validExt = ['jpg', 'jpeg', 'bmp', 'png', 'gif']
+        self.filename_wp_we = str()
         self.new_filename_wp_we_mem = str()
+
+        self.result_int = int()
+        self.include_int = self.include.find('yes', 0, len(self.include))
+        if self.include_int != (-1):
+            self.include_sub_folders = True
+        else:
+            self.include_sub_folders = False
+
+        self.extOk = False
+        self.types = self.types.replace(' ', '')
+        self.types = self.types.replace(';', ',')
+        self.types = self.types.replace(':', ',')
+        self.types = self.types.replace('\n', '')
+        self.types = self.types.rstrip(',')
+        self.validExt = self.types.split(',')
 
         self.total_count = int()
         self.dir_count = int()
@@ -65,31 +79,30 @@ class rename_script(object):
             # Generate revised filename based upon current rule-set
             if self.step_pointer == 2:
                 self.new_filename_wp_we = self.manipulator_object.generate_filename(self.filename_wp_we)
-                if self.new_filename_wp_we == self.filename_wp_we:
+                if os.path.normcase(self.filename_wp_we) == os.path.normcase(self.new_filename_wp_we):
+                    self.step_pointer = 4
+                else:
+                    logging.info('[rename_script.run] File-name is NOT valid')
                     self.step_pointer = 3
-                else:
-                    logging.info('[rename_script.run] File-name is NOT valid')
-                    self.step_pointer = 4
-
-
-            # Check to see if file-names match because they are the same file
-            if self.step_pointer == 3:
-                if os.path.samefile(self.new_filename_wp_we, self.filename_wp_we):
-                    logging.info('[rename_script.run] File-name is valid')
-                    self.step_pointer = 993
-                else:
-                    logging.info('[rename_script.run] File-name is NOT valid')
-                    self.step_pointer = 4
 
 
             # Check to see if desired file-name is already in-use
-            if self.step_pointer == 4:
+            if self.step_pointer == 3:
                 if os.path.isfile(self.new_filename_wp_we) == True:
                     logging.info('[rename_script.run] Name collision detected with existing file')
                     self.step_pointer = 5
                 else:
                     logging.info('[rename_script.run] Desired file-name is available')
                     self.step_pointer = 6
+
+            # Check to see if file-names match because they are the same file
+            if self.step_pointer == 4:
+                if os.path.samefile(self.new_filename_wp_we, self.filename_wp_we):
+                    logging.info('[rename_script.run] File-name is valid')
+                    self.step_pointer = 993
+                else:
+                    logging.info('[rename_script.run] Name collision detected with existing file')
+                    self.step_pointer = 5
 
 
             # Add index number to tail-end of filename to make unique

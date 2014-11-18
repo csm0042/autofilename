@@ -16,8 +16,9 @@ def callback(gui_object, instance, logfile):
 
     if instance == 2:
         path = str(gui_object.return_text(1))
+        types = str(gui_object.return_text(3))
+        include = str(gui_object.return_text(4))
         gui_object.clear_text(2)
         gui_object.write_text(2, ('\nUsing path --> ' + str(path)))
-        rename_script.rename_script(str(path), logfile)
-
+        rename_script.rename_script(str(path), logfile, types, include)
 
