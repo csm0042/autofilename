@@ -6,9 +6,7 @@ __author__ = 'chris.maue'
 #######################################################################################################################
 import logging
 import os
-import sys
-sys.path.insert(0, 'c:/python34/MyProjects/gui-by-ini/guibyini')
-import gui_class_definition
+import gui_builder
 import IO_thread
 
 
@@ -64,7 +62,7 @@ io_table_os = ApplicationIO()
 #######################################################################################################################
 # Start IO monitor thread
 #######################################################################################################################
-gui_object = gui_class_definition.gui(gui_ini_file, debug_log_file, io_table_os)
+gui_object = gui_builder.gui(gui_ini_file, debug_log_file, io_table_os)
 
 IoThread = IO_thread.monitor_io(io_table, io_table_cache, io_table_os, debug_log_file, gui_object)
 logging.info('[Main] Spawning IO monitor thread (thread-2)')
