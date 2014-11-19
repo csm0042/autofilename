@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../guibyini/.idea/guibyini.iml" filepath="$PROJECT_DIR$/../guibyini/.idea/guibyini.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/pic-rename.iml" filepath="$PROJECT_DIR$/.idea/pic-rename.iml" />
     </modules>
   </component>
