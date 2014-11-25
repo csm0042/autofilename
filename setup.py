@@ -28,15 +28,3 @@ setup(
     options={'py2exe': {'bundle_files': 2, 'compressed': True}},
     zip_safe=False,
     )
-
-#packages=find_packages('src'),      # Include all packages under 'src' folder
-    #console=[{'src': '_main.py'}],
-    #options={'py2exe': {
-    #    'packages': 'encodings, src',
-    #         'includes': None},
-    #         },
-
-
-    #package_dir={'':'src'},             # Tell setuptools that packages are under 'src' folder
-    #include_package_data=True,          # Include everything found in source control folder
-    #exclude_package_data={'':['README.TEXT']},
