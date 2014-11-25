@@ -5,21 +5,17 @@ __author__ = 'chris.maue'
 # Import required libraries
 #######################################################################################################################
 import logging
-import os
+import os, sys
 import autofilename
-#import IO_thread
-
-
 
 
 #######################################################################################################################
 # Determine project path and auto-set debug log file and gui configuration file names as appropriate
 #######################################################################################################################
-project_path = os.path.split(__file__)
+#project_path = os.path.split(os.path.abspath(__file__))
+project_path = os.path.split(sys.argv[0])
 debug_log_file = os.path.normcase(os.path.join(project_path[0], 'debug.log'))
 gui_ini_file = os.path.normcase(os.path.join(project_path[0], 'gui_setup.ini'))
-
-
 
 
 #######################################################################################################################
@@ -34,9 +30,6 @@ logging.info('[Main] Logging to file: %s' % debug_log_file)
 logging.info('[Main] Using GUI configuration file: %s' % gui_ini_file)
 
 
-
-
-
 #######################################################################################################################
 # Define Data types
 #######################################################################################################################
@@ -46,17 +39,12 @@ class ApplicationIO(object):
         self.output = [bool() for i in range(32)]
 
 
-
-
 #######################################################################################################################
 # Define Data tags used for interlocking between application window and IO monitor threads
 #######################################################################################################################
 io_table = ApplicationIO()
 io_table_cache = ApplicationIO()
 io_table_os = ApplicationIO()
-
-
-
 
 
 #######################################################################################################################
@@ -72,10 +60,6 @@ logging.info('[Main] IoThread daemon flag set to "True"')
 
 IoThread.start()
 logging.info('[Main] IoThread started')
-
-
-
-
 
 
 #######################################################################################################################
