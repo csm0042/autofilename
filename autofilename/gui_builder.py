@@ -1,5 +1,5 @@
 import logging
-import gui_callbacks
+from .gui_callbacks import *
 import tkinter as tk
 
 
@@ -410,7 +410,7 @@ class gui(object):
             self.button.config(borderwidth=int(self.button_settings.borderwidth))
         if self.button_settings.command != '':
             self.button.config(command=lambda instance=int(self.button_settings.command):
-            gui_callbacks.callback(self, instance, self.logfile))
+            callback(self, instance, self.logfile))
         if self.button_settings.compound != '':
             self.button.config(compound=self.button_settings.compound)
         if self.button_settings.cursor != '':

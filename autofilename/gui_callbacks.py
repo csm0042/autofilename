@@ -2,7 +2,7 @@ __author__ = 'chris.maue'
 
 
 import logging
-import rename_script
+from .rename_script import *
 
 
 def callback(gui_object, instance, logfile):
@@ -20,5 +20,5 @@ def callback(gui_object, instance, logfile):
         include = str(gui_object.return_text(4))
         gui_object.clear_text(2)
         gui_object.write_text(2, ('\nUsing path --> ' + str(path)))
-        rename_script.rename_script(str(path), logfile, types, include)
+        rename_script(str(path), logfile, types, include)
 

@@ -1,6 +1,6 @@
 __author__ = 'Christopher'
 
-import file_manipulator
+from .file_manipulator import *
 import logging
 import os
 
@@ -15,7 +15,7 @@ class rename_script(object):
                             filename=self.logfile, filemode='w')
         logging.info('[rename_script.__init__] Logger started')
 
-        self.manipulator_object = file_manipulator.file_manipulator(str(path), logfile)
+        self.manipulator_object = file_manipulator(str(path), logfile)
         self.filename_wp_we = str()
         self.new_filename_wp_we_mem = str()
 
