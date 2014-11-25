@@ -27,4 +27,6 @@ setup(
 
     options={'py2exe': {'bundle_files': 2, 'compressed': True}},
     zip_safe=False,
+
+    data_files=['gui_setup.ini']
     )
