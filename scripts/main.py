@@ -50,7 +50,7 @@ io_table_os = ApplicationIO()
 #######################################################################################################################
 # Start IO monitor thread
 #######################################################################################################################
-gui_object = autofilename.gui_builder.gui(gui_ini_file, debug_log_file, io_table_os)
+gui_object = autofilename.gui(debug_log_file)
 
 IoThread = autofilename.IO_thread.monitor_io(io_table, io_table_cache, io_table_os, debug_log_file, gui_object)
 logging.info('[Main] Spawning IO monitor thread (thread-2)')
