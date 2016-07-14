@@ -1,6 +1,6 @@
 __author__ = 'Christopher'
 
-from .file_manipulator import *
+from file_manipulator import *
 import logging
 import os
 

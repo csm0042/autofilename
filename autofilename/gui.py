@@ -3,7 +3,7 @@
 ################################################################################################################
 import logging
 import tkinter as tk
-import autofilename
+from rename_script import *
 
 
 ################################################################################################################
@@ -462,7 +462,7 @@ class gui(object):
             include = str(gui.return_text(self, 4))
             gui.clear_text(self, 2)
             gui.write_text(self, 2, ('\nUsing path --> ' + str(path)))
-            autofilename.rename_script(str(path), self.logfile, types, include)
+            rename_script(str(path), self.logfile, types, include)
 
 
     def return_root(self):

@@ -6,7 +6,9 @@ __author__ = 'chris.maue'
 #######################################################################################################################
 import logging
 import os, sys
-import autofilename
+from file_manipulator import *
+from gui import *
+from IO_thread import *
 
 
 #######################################################################################################################
@@ -50,9 +52,9 @@ io_table_os = ApplicationIO()
 #######################################################################################################################
 # Start IO monitor thread
 #######################################################################################################################
-gui_object = autofilename.gui(debug_log_file)
+gui_object = gui(debug_log_file)
 
-IoThread = autofilename.IO_thread.monitor_io(io_table, io_table_cache, io_table_os, debug_log_file, gui_object)
+IoThread = monitor_io(io_table, io_table_cache, io_table_os, debug_log_file, gui_object)
 logging.info('[Main] Spawning IO monitor thread (thread-2)')
 
 IoThread.daemon = True
