@@ -21,9 +21,9 @@ setup(
     packages=['autofilename'],
     include_package_data=True,
 
-    scripts=['scripts/main.py'],
-    #console=['scripts/main.py'],
-    windows=['scripts/main.py'],
+    scripts=['autofilename/main.py'],
+    #console=['autofilename/main.py'],
+    windows=['autofilename/main.py'],
 
     options={'py2exe': {'bundle_files': 2, 'compressed': True}},
     zip_safe=False,
